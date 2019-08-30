@@ -42,6 +42,15 @@
     <scope>provided</scope>
 </dependency>
 
+	<!-- <dependency>
+		<groupId>oracle</groupId>
+		<artifactId>ojdbc</artifactId>
+		<version>7</version>
+		<scope>system</scope>
+		<systemPath>/ProjectOneV1/src/main/webapp/WEB-INF/lib/ojdbc7.jar</systemPath>
+	</dependency> -->
+
+
   	
 	
   </dependencies>

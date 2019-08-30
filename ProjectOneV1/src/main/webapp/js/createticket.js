@@ -54,9 +54,41 @@ function populate(ticket) {
 	let colStatus = document.createElement('td');
 	colStatus.appendChild(document.createTextNode(ticket.status));
 	
+	let colDescription = document.createElement('td');
+	
+	let d_p = document.createElement('p');
+	
+	let d_button = document.createElement('button');
+	d_button.setAttribute('class','btn btn-primary');
+	d_button.setAttribute('type','button');
+	d_button.setAttribute('data-toggle','collapse');
+	d_button.setAttribute('data-target','#d_collapse'+ticket.ticket_ID);
+	d_button.setAttribute('aria-expanded','false');
+	d_button.setAttribute('aria-controls','collapseExample');
+	d_button.appendChild(document.createTextNode("View Description"));
+	
+	d_p.appendChild(d_button);
+	
+	let d_div1 = document.createElement('div');
+	d_div1.setAttribute('class','collapse');
+	d_div1.setAttribute('id','d_collapse'+ticket.ticket_ID);
+	
+	let d_div2 = document.createElement('div');
+	d_div2.setAttribute('class','card card-body');
+	
+	d_div2.appendChild(document.createTextNode(ticket.description));
+	
+	d_div1.appendChild(d_div2);
+	
+	colDescription.appendChild(d_div1);
+	colDescription.appendChild(d_p);
+	
 	row.appendChild(colUser);
 	row.appendChild(colAmnt);
 	row.appendChild(colType);
+	
+	row.appendChild(colDescription);
+	
 	row.appendChild(colStatus);
 	
 	pastTicketsTableBody[0].appendChild(row);
