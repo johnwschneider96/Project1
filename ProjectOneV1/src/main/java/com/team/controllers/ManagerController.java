@@ -16,10 +16,9 @@ public class ManagerController
 {
 	public static String Manage(HttpServletRequest request, HttpServletResponse response)
 	{
-		//TicketLoader.update();
 		sendTickets(TicketLoader.getTickets(), response);
 		
-		Logging.log.info("WORKS");
+		Logging.log.info("Loading all tickets to be displayed to Finance Manager.");
 		
 		return null;
 	}

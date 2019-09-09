@@ -20,9 +20,6 @@ public class RequestHelper
 			
 		case "/ProjectOneV1/html/Login.go":
 			return LoginController.Login(request);
-		
-		case "/ProjectOneV1/html/Home.go":
-			return HomeController.Home(request, response);
 			
 		case "/ProjectOneV1/html/Create.go":
 			return CreateController.Create(request);

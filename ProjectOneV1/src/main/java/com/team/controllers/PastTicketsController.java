@@ -23,7 +23,7 @@ public class PastTicketsController
 		
 		sendTickets(ticketDAOImpl.getTicketsByUsername(user.getUsername()), response);
 		
-		Logging.log.info("WORKS");
+		Logging.log.info("Loading all tickets belonging to Employee: "+user.getUsername());
 		
 		return null;
 	}

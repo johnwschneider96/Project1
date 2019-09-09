@@ -52,7 +52,23 @@ function populate(ticket) {
 	colType.appendChild(document.createTextNode(ticket.type));
 	
 	let colStatus = document.createElement('td');
-	colStatus.appendChild(document.createTextNode(ticket.status));
+	
+	let status = '';
+	
+	switch(ticket.status)
+	{
+	case 1:
+		status = 'Active';
+		break;
+	case 2:
+		status = 'Approved';
+		break;
+	default:
+		status = 'Denied';
+		break;
+	}
+	
+	colStatus.appendChild(document.createTextNode(status));
 	
 	let colDescription = document.createElement('td');
 	
