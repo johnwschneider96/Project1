@@ -1,0 +1,3 @@
+[submodule "AngularSpringMVC"]
+	path = AngularSpringMVC
+	url = https://github.com/johnwschneider96/Project2.git
